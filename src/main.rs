@@ -150,16 +150,8 @@ fn swap(item: Item) -> Item {
       }//Pop::Last(second) => {
 
       Pop::Next(second) => {
-       if index == 1 {
-        swap.value = second;
+       if index == 1 { swap.value = second; swap.push(first); } else { swap.push(second); swap.push(first); }
 
-        swap.push(first);
-
-       } else {//if index == 1 {
-        swap.push(second);
-
-        swap.push(first);
-       }//} else {//if index == 1 {
       }//Pop::Next(second) => {
      }//match reverse.pop() {
     }//Pop::Next(first) => {
